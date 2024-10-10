@@ -6,3 +6,4 @@
 # Notas:
 # En python las variables son dinamicas
 print("pruebas")
+print("hola")
