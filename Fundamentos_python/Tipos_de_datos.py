@@ -5,3 +5,4 @@
 
 # Notas:
 # En python las variables son dinamicas
+print("hola ron con cola")
