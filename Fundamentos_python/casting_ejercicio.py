@@ -6,7 +6,7 @@
 # //////////////////////////////////////////////////////////////////////////////////////////
 # a)
 # *****   Conversión de número a cadena     *****
-primer_numero = 3.14159265
+primer_numero = 3.14159265      # declaramos nuestras variables
 segundo_numero = 12
 tercer_numero = 0
 
@@ -25,8 +25,8 @@ print()
 print("Conversión a booleanos.")
 print()
 
-valor_booleano = bool(primer_numero)
-print(f"¿El valor de {primer_numero} es verdadero? {valor_booleano}.")
+valor_booleano = bool(primer_numero)        #creamos una variables para la representación del valor booleano tomando las variables que se crearon anteriormente
+print(f"¿El valor de {primer_numero} es verdadero? {valor_booleano}.")      # Para cada uno de los casos
 
 valor_booleano = bool(segundo_numero)
 print(f"¿El valor de {segundo_numero} es verdadero? {valor_booleano}.")
@@ -37,8 +37,8 @@ print(f"¿El valor de {tercer_numero} es verdadero? {valor_booleano}.")
 # //////////////////////////////////////////////////////////////////////////////////////////
 # c)
 # *****   Conversión de cadena a entero     *****
-primer_numero = "100.02"
-primer_numero_float = float(primer_numero)
+primer_numero = "100.02"        # Reciclamos nuestras variables anteriores, asi logrando tener tener mejor limpieza de codigo sin basura
+primer_numero_float = float(primer_numero)      # Creamos una nueva variable dependiente de cada uno de los numeros anteriores
 
 segundo_numero = "10002"
 segundo_numero_int = int(segundo_numero)
@@ -67,7 +67,7 @@ print()
 print("Conversión a booleanos.")
 print()
 
-valor_booleano = bool(primer_numero_float)
+valor_booleano = bool(primer_numero_float)      # Se reutiliza la variable booleana tomando las nuevas variables para generar el valor
 print(f"¿El valor de {primer_numero_float} es verdadero? {valor_booleano}.")
 
 valor_booleano = bool(segundo_numero_int)
