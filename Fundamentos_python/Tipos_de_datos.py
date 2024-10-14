@@ -1,6 +1,6 @@
 # Gracida Tapia Bryan
 # 13 de octubre del 2024
-# Descripcion:
+# Descripción:
 # Uso de los tipos de datos en python
 
 # Notas:
