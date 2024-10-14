@@ -39,7 +39,7 @@ print()
 print("Edad:", edad)        # La variable edad ahora tiene una valor de tipo String
 
 # Reglas para los nombres de las variables en Python:
-# - Utilizar únicamente letras (mayúsculas o minúsculas), números y el guion bajo
+# - Utilizar únicamente letras (mayúsculas o minúsculas), números y el guión bajo
 # - La variable no puede iniciar con números
 # - No se pueden utilizar palabras reservadas, ejemplos: if, else, True, class
 # - Es sensible a mayúsculas y minúsculas. Por ejemplo, las palabras "Hola", "hola" y "HOLA" son consideradas diferentes.
@@ -49,5 +49,5 @@ print("Edad:", edad)        # La variable edad ahora tiene una valor de tipo Str
 # - Separar las palabras con el guion bajo
 # - Utilizar nombres descriptivos de acuerdo a su uso. Por ejemplo: edad, en lugar de e.
 
-print()     #se suele usar cuando se quiere dar un salto de linea
+print()     #se suele usar cuando se quiere dar un salto de línea
 print("Las variables son sensibles a mayúsculas y minúsculas:")
