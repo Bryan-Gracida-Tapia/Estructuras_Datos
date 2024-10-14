@@ -1,16 +1,16 @@
 # Gracida Tapia Bryan
 # 13 de octubre del 2024
-# Descripcion:
-# En el siguiente archivo pondremos en practica lo visto en conversion de tipos de datos(casting).
+# Descripción:
+# En el siguiente archivo pondremos en practica lo visto en conversión de tipos de datos(casting).
 
 # //////////////////////////////////////////////////////////////////////////////////////////
 # a)
-# *****   Conversión de numero a cadena     *****
+# *****   Conversión de número a cadena     *****
 primer_numero = 3.14159265
 segundo_numero = 12
 tercer_numero = 0
 
-# *****   Impresion de las converciones mediante letreros     *****
+# *****   Impresión de las converciones mediante letreros     *****
 print()
 print("Conversión de número a cadena.")
 print()
@@ -46,9 +46,9 @@ segundo_numero_int = int(segundo_numero)
 tercer_numero = "0"
 tercer_numero_int = int(tercer_numero)
 
-# *****   Impresión de las converciónes mediante letreros     *****
+# *****   Impresión de las converciones mediante letreros     *****
 print()
-print("Conversion de cadena a numero.")
+print("Conversión de cadena a numero.")
 print()
 
 print("Conversión de cadena a flotante.")
@@ -62,7 +62,7 @@ print(f"Número como cadena: {tercer_numero_int}.")
 
 # //////////////////////////////////////////////////////////////////////////////////////////
 # d)
-# *****   Representacion de los valores anteriores indicando su valor booleano     *****
+# *****   Representación de los valores anteriores indicando su valor booleano     *****
 print()
 print("Conversión a booleanos.")
 print()
