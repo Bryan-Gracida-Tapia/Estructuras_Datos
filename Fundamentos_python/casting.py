@@ -1,6 +1,6 @@
 # Gracida Tapia Bryan
 # 13 de octubre del 2024
-# Descripcion:
+# Descripción:
 # Conversión de tipos de datos (casting) en Python.
 
 # Notas
