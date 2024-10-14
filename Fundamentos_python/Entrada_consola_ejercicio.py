@@ -1,7 +1,7 @@
 # Gracida Tapia Bryan.
 # 14 de octubre del 2024.
 # Descripción:
-# Ejemplificación de entrada por consolas y operaciones basicas.
+# Practica de entrada por consolas y operaciones basicas.
 
 
 # Declaramos nuestras variables.
