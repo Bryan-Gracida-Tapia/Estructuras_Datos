@@ -1,6 +1,6 @@
 # Gracida Tapia Bryan
 # 13 de octubre de 2024
-# En este archivo se ejemplifica el uso de variables en Python.
+# En el siguiente archivo se ejemplifica el uso de variables en Python.
 
 # Notas:
 # En Python todo es un objeto.
