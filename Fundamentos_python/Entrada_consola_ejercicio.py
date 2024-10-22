@@ -33,5 +33,5 @@ print()
 print(" ****  División  ****")
 print(f"El resultado de la división de {primer_float} y {segundo_float} es: {resultado_float:.2f}")     # En python untilizamos : :.(numero)f dependiendo, el numero de decimales que queremos que nos muestre la variable
 
-# En Python se pueden generar las operaciones basicas ya sea asignando el valor de la operacion a una variable
+# En Python se pueden generar las operaciones basicas, ya sea asignando el valor de la operacion a una variable
 # Tambien se puede haciendolo directo a la hora de impresion de la siguiente forma : {(n1+n2)}
