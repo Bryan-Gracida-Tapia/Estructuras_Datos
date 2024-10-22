@@ -3,17 +3,17 @@
 # Descripción:
 # Conversión de cadenas a int, float y boolean mediante la interacción con consola.
 
-# .
+# Se leen los datos por consola al mismno tiempo que se realiza el casting al tipo de dato que corresponde, ahorrando asi líneas de código.
 print("****   Datos de los alumnos    *****")
-nombre = input("Ingresa el nombre: ")
-semestre = int(input("Ingresa el no. de semestre: "))
-promedio = float(input("Ingresa el promedio: "))
-es_mujer = input("¿Es mujer (Si/No)?: ")
+nombre = input("Ingresa el nombre: ")       # El nombre se queda solamente con el input puesto que ya se lee como una cadena
+semestre = int(input("Ingresa el no. de semestre: "))       # El semestre se lee como cadena y asu vez se realiza el casting a entero
+promedio = float(input("Ingresa el promedio: "))        # El promedio se lee como cadena y asu vez se realiza el casting a float
+es_mujer = input("¿Es mujer (Si/No)?: ")        # El es_mujer se queda solamente con el input puesto que ya se lee como una cadena
 
 
 # No es posible convertir directamente una cadena a un valor booleano.
 # Por ello, utilizamos la misma variable, convertimos a  minúsculas y lo comparamos con la cadena "si".
-es_mujer = es_mujer.lower() == "si" #con el punto accedemos a las propiedades la variable y el lower es para convertir a minúsculas, posteriormente se compara con la cadema "si"
+es_mujer = es_mujer.lower() == "si" # Con el punto accedemos a las propiedades la variable y el lower es para convertir a minúsculas, posteriormente se compara con la cadema "si"
 
 # Se imprimen los datos del alumno.
 print() #Imprimir salto de línea
