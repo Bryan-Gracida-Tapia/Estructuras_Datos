@@ -10,6 +10,7 @@ segundo_numero = input("Introduce otro número decimal: ")
 # Convertimos los valores recibidos anteriormente en flotantes.
 primer_float = float(primer_numero)
 segundo_float = float(segundo_numero)
+
 # Operaciones basicas.
 
 resultado_float = primer_float + segundo_float # Operación de suma.
@@ -30,5 +31,7 @@ print(f"El resultado de la multiplicación de {primer_float} y {segundo_float} e
 resultado_float = primer_float / segundo_float # Operación de divición.
 print()
 print(" ****  División  ****")
-print(f"El resultado de la división de {primer_float} y {segundo_float} es: {resultado_float}")
+print(f"El resultado de la división de {primer_float} y {segundo_float} es: {resultado_float:.2f}")     # En python untilizamos : :.(numero)f dependiendo, el numero de decimales que queremos que nos muestre la variable
 
+# En Python se pueden generar las operaciones basicas ya sea asignando el valor de la operacion a una variable
+# Tambien se puede haciendolo directo a la hora de impresion de la siguiente forma : {(n1+n2)}
