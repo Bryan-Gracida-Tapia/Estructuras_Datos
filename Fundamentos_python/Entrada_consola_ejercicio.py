@@ -1,7 +1,7 @@
-# Gracida Tapia Bryan.
+# Gracida Tapia Bryan. 8
 # 14 de octubre del 2024.
 # Descripción:
-# Practica de entrada por consolas y operaciones basicas.
+# Practica de entrada por consolas y operaciones básicas.
 
 
 # Declaramos nuestras variables.
@@ -11,7 +11,7 @@ segundo_numero = input("Introduce otro número decimal: ")
 primer_float = float(primer_numero)
 segundo_float = float(segundo_numero)
 
-# Operaciones basicas.
+# Operaciones básicas.
 
 resultado_float = primer_float + segundo_float # Operación de suma.
 print()
@@ -31,7 +31,7 @@ print(f"El resultado de la multiplicación de {primer_float} y {segundo_float} e
 resultado_float = primer_float / segundo_float # Operación de divición.
 print()
 print(" ****  División  ****")
-print(f"El resultado de la división de {primer_float} y {segundo_float} es: {resultado_float:.2f}")     # En python untilizamos : :.(numero)f dependiendo, el numero de decimales que queremos que nos muestre la variable
+print(f"El resultado de la división de {primer_float} y {segundo_float} es: {resultado_float:.2f}")     # En python untilizamos : :.(numero)f dependiendo, el número de decimales que queremos que nos muestre la variable
 
-# En Python se pueden generar las operaciones basicas, ya sea asignando el valor de la operacion a una variable
-# Tambien se puede haciendolo directo a la hora de impresion de la siguiente forma : {(n1+n2)}
+# En Python se pueden generar las operaciones básicas, ya sea asignando el valor de la operación a una variable
+# También se puede haciendolo directo a la hora de impresión de la siguiente forma : {(n1+n2)}
