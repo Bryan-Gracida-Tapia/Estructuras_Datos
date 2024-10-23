@@ -6,8 +6,8 @@
 
 #//////////////////////////////no///////////////////////////////////////////////////////////
 # Primer ejercicio.
-primer_respuesta = input("Ingresa un numero ? : ")
-numero_int = int(primer_respuesta)
+primer_respuesta = int(input("Ingresa un numero ? : "))
 
 
-print(f"El numero {primer_respuesta} esta entre 10 y 15? {(numero_int>=10) and (numero_int<= 15) }")
+
+print(f"El numero {primer_respuesta} esta entre 10 y 15? {(primer_respuesta>=10) and (primer_respuesta<= 15) }")
