@@ -1,17 +1,17 @@
 # Gracida Tapia Bryan.
 # 15 de octubre del 2024.
 # Descripción:
-# Ejemplificacion de operadores aritmeticos.
+# Ejemplificación de operadores aritméticos.
 
 
 # Declaramos nuestras variables.
-primer_numero = input("Introduce un número entero: ")      # Les agregamos un input para asi generar una entrada de datos por consola.
+primer_numero = input("Introduce un número entero: ")      # Les agregamos un input para así generar una entrada de datos por consola.
 segundo_numero = input("Introduce otro número entero: ")
-# Convertimos los valores recibidos anteriormente en flotantes.
+# Convertimos los valores recibidos anteriormente a enteros.
 primer_int = int(primer_numero)
 segundo_int = int(segundo_numero)
 
-# operaciones aritmeticas basicas
+# operaciones aritméticas básicas
 
 resultado_int = primer_int + segundo_int # Operación suma
 print()
@@ -25,25 +25,25 @@ print(f"El resultado de la resta de {primer_int} y {segundo_int} es: {resultado_
 
 resultado_int = primer_int * segundo_int # Operación de multiplicación.
 print()
-print(" ****  Multiplicacion  ****")
-print(f"El resultado de la multiplicacion de {primer_int} y {segundo_int} es: {resultado_int}")
+print(" ****  Multiplicación  ****")
+print(f"El resultado de la multiplicación de {primer_int} y {segundo_int} es: {resultado_int}")
 
-resultado_int = primer_int / segundo_int # Operación de divición.
+resultado_int = primer_int / segundo_int # Operación de división.
 print()
 print(" ****  División  ****")
 print(f"El resultado de la división de {primer_int} y {segundo_int} es: {resultado_int:.2f}")
 
-resultado_int = primer_int % segundo_int # Operación de modulo.
+resultado_int = primer_int % segundo_int # Operación de módulo.
 print()
-print(" ****  Modulo  ****")
+print(" ****  Módulo  ****")
 print(f"El resultado de la división de {primer_int} y {segundo_int} es: {resultado_int}")
 
-resultado_int = primer_int // segundo_int # Operación de divición entera.
+resultado_int = primer_int // segundo_int # Operación de división entera.
 print()
-print(" ****  Divicion entera  ****")
+print(" ****  División entera  ****")
 print(f"El resultado de la división de {primer_int} y {segundo_int} es: {resultado_int}")
 
-resultado_int = primer_int ** segundo_int # Operación de .
+resultado_int = primer_int ** segundo_int # Operación de portencia.
 print()
 print(" ****  Potencias  ****")
-print(f"El resultado de la división de {primer_int} y {segundo_int} es: {resultado_int}")
+print(f"El resultado de la potencia de {primer_int} y {segundo_int} es: {resultado_int}")
