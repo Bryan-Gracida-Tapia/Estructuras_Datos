@@ -12,7 +12,7 @@ aux = numero_piramide
 contador=0
 print("1)")
 print()
-for i in range(1,numero_piramide):
+for i in range(1,numero_piramide+1):
     asteriscos = "*" * i
     print(f"{asteriscos}",end="")
     print()
@@ -20,7 +20,7 @@ for i in range(1,numero_piramide):
 # segundo ejercicio
 print("2)")
 print()
-for i in range(1,numero_piramide):
+for i in range(1,numero_piramide+1):
     asteriscos = "*" * numero_piramide
     print(f"{asteriscos}",end="")
     numero_piramide -= 1
@@ -30,19 +30,21 @@ numero_piramide = aux
 # tercero ejercicio
 print("3)")
 print()
-for i in range(1,numero_piramide):
+for i in range(1,numero_piramide+1):
     tabulador = " " * i
     asteriscos = "*" * numero_piramide
     print(f"{tabulador}{asteriscos}",end="")
     numero_piramide -= 1
     print()
+numero_piramide = aux
 #/////////////////////////////////////////////////////////////////////////////////////////
 # cuarto ejercicio
-print("3)")
+print("4)")
 print()
-for i in range(1,numero_piramide):
-    tabulador = " " * i
-    asteriscos = "*" * numero_piramide
-    print(f"{tabulador}{asteriscos}",end="")
+for i in range(1,aux+1):
+    tabulador = " " * numero_piramide
+    asteriscos = "*" * i
+    print(f"{tabulador}{asteriscos}{asteriscos}",end="")
     numero_piramide -= 1
     print()
+
