@@ -3,6 +3,7 @@
 # Descripción:
 # Creaciones de listas.
 
+
 # COLA_FIFO: firs input firs ouput
 # PILA_QUEUE_LIFO: last input firs ouput
 # /////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +24,8 @@ def menu():
 # ///////////////////////////////////////////////////////////////////////////////////////// Funcion asignacion
 def asignaciones(opcion,videos):
     i = 1
-    if opcion == 1:
+# /////////////////////////////////////////////// Imprimir la matriz
+    if opcion == 1: #
         print("Lista:")
         print(videos)
     elif opcion == 2:
@@ -34,7 +36,7 @@ def asignaciones(opcion,videos):
         videos.sort(reverse= True)
         print("Lista Z-A:")
         print(videos)
-
+# /////////////////////////////////////////////// Ingresar datos a la matriz
     elif opcion == 4:
         nombre_video = input("Ingrese el nombre del video: ")
         videos.append(nombre_video)
@@ -46,20 +48,20 @@ def asignaciones(opcion,videos):
             videos.append(nombre_video)
             i += 1
         i=1
+# /////////////////////////////////////////////// Eliminar datos de la matriz
     elif opcion == 6:
         for videos in videos:
             print(f"{i}) {videos}")
             i += 1
-        eliminar = int(input("Ingrese el numero del video que desea eliminar: "))
-        del videos[eliminar-1]
+        eliminar = int(input("Ingrese el número del video que desea eliminar: "))
+        videos.pop(eliminar-1)
     elif opcion == 7:
         print("Saliendo del programa")
-        return opcion
-    print()
-    return videos
 
+    print()
+# /////////////////////////////////////////////// Codigo principal
 opcion = 0
-videos = []
+videos=[]
 while opcion != 7:
     opcion = menu()
-    videos = asignaciones(opcion,videos)
+    asignaciones(opcion,videos)
