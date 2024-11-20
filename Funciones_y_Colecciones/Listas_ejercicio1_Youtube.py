@@ -21,11 +21,13 @@ def menu():
     opcion = int(input("Elija una opción: "))
     print()
     return opcion
+
+
 # ///////////////////////////////////////////////////////////////////////////////////////// Funcion asignacion
-def asignaciones(opcion,videos):
+def asignaciones(opcion, videos):
     i = 1
-# /////////////////////////////////////////////// Imprimir la matriz
-    if opcion == 1: #
+    # /////////////////////////////////////////////// Imprimir la matriz
+    if opcion == 1:  #
         print("Lista:")
         print(videos)
     elif opcion == 2:
@@ -33,10 +35,10 @@ def asignaciones(opcion,videos):
         print("Lista A-Z:")
         print(videos)
     elif opcion == 3:
-        videos.sort(reverse= True)
+        videos.sort(reverse=True)
         print("Lista Z-A:")
         print(videos)
-# /////////////////////////////////////////////// Ingresar datos a la matriz
+    # /////////////////////////////////////////////// Ingresar datos a la matriz
     elif opcion == 4:
         nombre_video = input("Ingrese el nombre del video: ")
         videos.append(nombre_video)
@@ -47,21 +49,30 @@ def asignaciones(opcion,videos):
             nombre_video = input(f"Ingrese el nombre del video {i}: ")
             videos.append(nombre_video)
             i += 1
-        i=1
-# /////////////////////////////////////////////// Eliminar datos de la matriz
+        i = 1
+    # /////////////////////////////////////////////// Eliminar datos de la matriz
     elif opcion == 6:
-        for videos in videos:
+        for video in videos:
             print(f"{i}) {videos}")
             i += 1
         eliminar = int(input("Ingrese el número del video que desea eliminar: "))
-        videos.pop(eliminar-1)
+        videos.pop(eliminar - 1)
     elif opcion == 7:
         print("Saliendo del programa")
 
     print()
+
+
 # /////////////////////////////////////////////// Codigo principal
 opcion = 0
-videos=[]
+i=0
+videos = []
 while opcion != 7:
     opcion = menu()
-    asignaciones(opcion,videos)
+    if opcion == 6:
+        for video in videos:
+            print(f"{i}) {video}")
+            i += 1
+        eliminar = int(input("Ingrese el número del video que desea eliminar: "))
+        videos.pop(eliminar - 1)
+    asignaciones(opcion, videos)
