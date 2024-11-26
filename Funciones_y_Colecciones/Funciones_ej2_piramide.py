@@ -68,7 +68,7 @@ def piramides (opcion):
         print("Saliendo del programa...")
 
     else:
-        print("Opción no valida, intente de nuevo")
+        print("Opción no valida")
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
