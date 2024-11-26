@@ -1,17 +1,13 @@
 # Gracida Tapia Bryan.
-# 12 de septiembre del 2024.
+# 25 de noviembre del 2024.
 # Descripción:
-# Creaciones de listas.
-from numpy.random import poisson
+# Creación de listas de alumnos y manipulación mediante el uso de bibliotecas.
 
 
-# COLA_FIFO: firs input firs ouput
-# PILA_QUEUE_LIFO: last input firs ouput
-# /////////////////////////////////////////////////////////////////////////////////////////
-# Primer ejercicio
-# ///////////////////////////////////////////////////////////////////////////////////////// Funcion menu
+
+# ///////////////////////////////////////////////////////////////////////////////////////// Función menú.
 def menu():
-    print(" *** Menu ***")
+    print("     *** Menú ***")
     print("1) Ver calificaciones de un alumno.")
     print("2) Ver promedios de los alumnos.")
     print("3) Añadir alumno.")
@@ -23,87 +19,76 @@ def menu():
     return opcion
 
 
-# ///////////////////////////////////////////////////////////////////////////////////////// Funcion acción
+# ///////////////////////////////////////////////////////////////////////////////////////// Función acción.
 def accion(opcion):
     contador = 0
-    if opcion == 1: # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar lista
+    if opcion == 1:                     # \\\\\\\\\\\\\\\\\\\\\\\\\ Ver todas las calificaciones de un alumno.
         if not alumnos:
             print("No hay alumnos registrados.")
+            return
         print("Lista:")
-        for i,alumno in enumerate(alumnos):
-            print(f"{i+1}) {alumno['nombre']}")
-
+        for alumno in alumnos: # Se imprimen todoss los alumnos existentes en forma de lista.
+            print(f"{contador}) {alumno['nombre']}")
+            contador += 1
         alumno_elejido = int(input("Ingrese el número del alumno a mostrar: "))
-
         alumno = alumnos[alumno_elejido-1]
-        posicion = (alumno_elejido-1) * 5
+
         print(f"     ***{alumno['nombre']}***")
         print(f"Calificaciones:")
-        print(f"Estructura de datos: {alumno['calificaciones'][posicion+1]}")
-        print(f"Derecho y legislación: {alumno['calificaciones'][posicion+2]}")
-        print(f"Contabilidad General: {alumno['calificaciones'][posicion+3]}")
-        print(f"Electronica II: {alumno['calificaciones'][posicion+4]}")
-        print(f"Algebra Lineal: {alumno['calificaciones'][posicion+5]}")
-        print(f"Promedio: {(alumno['calificaciones'][posicion+1]+alumno['calificaciones'][posicion+2]+alumno['calificaciones'][posicion+3]+alumno['calificaciones'][posicion+4]+alumno['calificaciones'][posicion+5]) / 5}")
+        print(f"Estructura de datos: {alumno['calificaciones']['Estructura de datos']}")
+        print(f"Derecho y legislación: {alumno['calificaciones']['Derecho y legislación']}")
+        print(f"Contabilidad General: {alumno['calificaciones']['Contabilidad General']}")
+        print(f"Electrónica II: {alumno['calificaciones']['Electrónica II']}")
+        print(f"Álgebra Lineal: {alumno['calificaciones']['Álgebra Lineal']}")
+        print(f"Promedio: {sum(alumno['calificaciones'].values())/5}") # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para despues dividirlo entre 5.
         print()
-
-    elif opcion == 2: # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar promedios
+    elif opcion == 2:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Ver el promedio de cada alumno.
+        contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
-        contador =0
         for i in alumnos:
-            posicion = (contador)*5
             alumno = alumnos[contador]
-            promedio = ((alumno['calificaciones'][posicion+1]+alumno['calificaciones'][posicion+2]+alumno['calificaciones'][posicion+3]+alumno['calificaciones'][posicion+4]+alumno['calificaciones'][posicion+5])/5)
+            promedio = sum(alumno['calificaciones'].values())/5 # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para despues dividirlo entre 5.
             print(f"    ***{alumno['nombre']}***")
             print(f"Promedio: {promedio:.2f}")
-            contador+=1
+            contador += 1
 
-    elif opcion == 3: # \\\\\\\\\\\\\\\\\\\\\\\\\ Ingresar alumno
-        nombre = input("Ingresa el nombre del nuevo alumno: ")
+    elif opcion == 3:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Agregar a un alumno.
+        nombre = input("Ingrese el nombre del nuevo alumno: ")
+        materias = ["Estructura de datos", "Derecho y legislación", "Contabilidad General","Electrónica II", "Álgebra Lineal"]
+        for materia in materias: # Se lee cada calificación en el orden de la lista  materias y se van guardando dentro de otra lista.
+                calificacion = float(input(f"{materia}: "))
+                calificaciones[materia] = calificacion
 
-        print(f"Estructura de datos: ",end="")
-        calificacion = int(input(""))
-        calificaciones.append(calificacion)
-        print(f"\nDerecho y legislación: ",end="")
-        calificacion = int(input(""))
-        calificaciones.append(calificacion)
-        print(f"\nContabilidad General: ",end="")
-        calificacion = int(input(""))
-        calificaciones.append(calificacion)
-        print(f"\nElectronica II: ",end="")
-        calificacion = int(input(""))
-        calificaciones.append(calificacion)
-        print(f"\nAlgebra Lineal: ",end="")
-        calificacion = int(input(""))
-        calificaciones.append(calificacion)
+        alumnos.append({"nombre": nombre, "calificaciones": calificaciones})
+        alumnos.append(nombre,)
+        print(f"Alumno agregado correctamente.")
 
-        alumnos.append({"nombre": nombre,"calificaciones":calificaciones})
-        print(f"Alumno {nombre} añadido.")
-
-    elif opcion == 4: # \\\\\\\\\\\\\\\\\\\\\\\\\ eliminar alumno
+    elif opcion == 4:                    # \\\\\\\\\\\\\\\\\\\\\\\\\ Eliminar alumno.
+        contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
-        for i, alumno in enumerate(alumnos):
-            print(f"{i + 1}) {alumno['nombre']}")
-        alumno_elejido = int(input("Ingrese el número del alumno a eliminar: "))
-        eliminar = alumnos[alumno_elejido - 1]
-        posicion = (alumno_elejido - 1) * 5
-        alumnos.pop(eliminar['nombre'])
-        alumnos.pop(eliminar['calificaciones'][posicion+1])
-        alumnos.pop(eliminar['calificaciones'][posicion+2])
-        alumnos.pop(eliminar['calificaciones'][posicion + 3])
-        alumnos.pop(eliminar['calificaciones'][posicion + 4])
+        print("Lista de alumnos:")
+
+        for alumno in alumnos: # Se imprimen todos los alumnos existentes en forma de lista.
+            print(f"{contador}) {alumno['nombre']}")
+            contador += 1
+
+        alumno_elegido = int(input("Ingrese el número del alumno a eliminar: "))
+        eliminado = alumnos.pop(alumno_elegido - 1)
+        print(f"Alumno {eliminado['nombre']} eliminado correctamente.")
 
 
-    elif opcion == 5: # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar promedio grupal
+
+    elif opcion == 5:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar promedio grupal.
+        total_calificaciones = 0
+        contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
         for alumno in alumnos:
-            suma_total = sum(sum(alumno["calificaciones"]))
-        for alumno in alumnos:
-            total_calificaciones = sum(len(alumno["calificaciones"]))
-        promedio_grupal = suma_total / total_calificaciones
+            total_calificaciones += sum(alumno['calificaciones'].values())/5 # # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para luego dividirlo entre las materias existentes
+            contador +=1
+        promedio_grupal = total_calificaciones / contador # El promedio grupal es el resultado de la suma del promedio final de cada alumno, entre los alumnos existentes.
         print(f"Promedio grupal: {promedio_grupal:.2f}")
 
     elif opcion == 6:
@@ -111,15 +96,20 @@ def accion(opcion):
 
 
     else:
-        print("Opción no válida, intenta de nuevo.")
+        print("Opción no válida...")
 
 
-
-
-# # \\\\\\\\\\\\\\\\\\\\\\\\\ programa principal
-opcion = 0
+# ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
+# Programa principal
 alumnos = []
-calificaciones = [0]
-while opcion <= 5:
+calificaciones = {}
+opcion = 0
+while opcion != 6:
     opcion = menu()
     accion(opcion)
+
+    print()
+    print("-----------------------------")
+    print()
+
+

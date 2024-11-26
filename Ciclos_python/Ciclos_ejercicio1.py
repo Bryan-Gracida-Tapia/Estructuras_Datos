@@ -1,20 +1,23 @@
 # Gracida Tapia Bryan.
 # 28 de octubre del 2024.
 # Descripción:
-# Programa que imprime un ejemplo del ciclo while.
+# Programa que imprime un ejemplo del ciclo while, mediante una suma acumulativa.
 
 
-#/////////////////////////////////////////////////////////////////////////////////////////
-# Primer ejercicio
-print("  *** Programa que imprime un ciclo while ***")
-numero = int(input("ingrese la cantidad de numeros a imprimir en consola: "))
-print(f"La suma de 1 hasta el {numero} : ")
-contador = 1
-total = 0
-while contador <= numero:
-    total += contador
-    contador +=1
+#///////////////////////////////////////////////////////////////////////////////////////// suma acumulativa.
+def suma_acumulativa(numero):
+    contador = 1
+    total = 0
+    while contador <= numero:
+        total += contador
+        contador += 1
+    return total
+#///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
+print("  *** Programa que imprime un ciclo while ***\n")
+numero = int(input("Ingrese un número: "))
+print(f"\nLa suma de 1 hasta el {numero} es de: ", end= "")
+total = suma_acumulativa(numero)
 print(f"{total}")
-print("Fin de la cuenta")
+print("\nFin de la cuenta")
 #
 # randint (primer numero,segundo numero)

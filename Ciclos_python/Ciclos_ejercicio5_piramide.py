@@ -44,7 +44,11 @@ print()
 for i in range(1,aux+1):
     tabulador = " " * numero_piramide
     asteriscos = "*" * i
-    print(f"{tabulador}{asteriscos}{asteriscos}",end="")
+    print(f"{tabulador}{asteriscos}",end="")
+    i -= 1
+    asteriscos = "*" * i
+    print(f"{asteriscos}")
+    i +=1
     numero_piramide -= 1
     print()
 

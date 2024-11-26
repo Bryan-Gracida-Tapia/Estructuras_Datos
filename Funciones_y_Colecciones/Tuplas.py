@@ -1,11 +1,10 @@
 # Gracida Tapia Bryan.
 # 12 de septiembre del 2024.
 # Descripción:
-# Creaciones de listas.
+# Creaciones y observación de tuplas.
 
 # /////////////////////////////////////////////////////////////////////////////////////////
 # Primer ejercicio
-# ///////////////////////////////////////////////////////////////////////////////////////// Funcion
 print(  "***Ejemplo de Tupla")
 print(  "\n***Fechas de cumpleaños***")
 fechas_cumple = ('12-19','12-27','10-01','10-18','01-11','09-30','08-25','01-06','10-21','04-11','03-06','08-02')
