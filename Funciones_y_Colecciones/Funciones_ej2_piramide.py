@@ -1,18 +1,18 @@
 # Gracida Tapia Bryan.
 # 25 de noviembre del 2024.
-# Creación de piramides mediante el triangulo elejido .
+# Creación de piramides mediante el triángulo elejido .
 
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Función menú.
 def menu():
     print("     *** Menú ***")
-    print("1) Triangulo rectangulo.")
-    print("2) Triangulo rectangulo de cabeza.")
-    print("3) Triangulo rectangulo de cabeza espejo.")
-    print("4) Triangulo isoseles.")
+    print("1) Triángulo rectángulo.")
+    print("2) Triángulo rectángulo de cabeza.")
+    print("3) Triángulo rectángulo de cabeza espejo.")
+    print("4) Triángulo isoseles.")
     print("5) Salir.")
-    print("Elija el triangulo que desea crear:")
+    print("Elija el triángulo que desea crear:")
     opcion = int(input())
     print()
     return opcion
@@ -22,10 +22,10 @@ def menu():
 # ///////////////////////////////////////////////////////////////////////////////////////// Función piramides.
 def piramides (opcion):
     aux = 0
-    numero_filas = int(input("Ingrese el número de filas que tenga el triangulo: "))
+    numero_filas = int(input("Ingrese el número de filas que tenga el Triángulo: "))
     aux = numero_filas
-    if opcion == 1:                     # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  Triangulo rectangulo.
-        print("     *** Triangulo rectangulo.  ***\n")
+    if opcion == 1:                     # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  Triángulo rectangulo.
+        print("     *** Triángulo rectángulo.  ***\n")
         contador = 0
         print("1)")
         print()
@@ -33,8 +33,8 @@ def piramides (opcion):
             asteriscos = "*" * i
             print(f"{asteriscos}", end="")
             print()
-    elif opcion == 2:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triangulo rectangulo de cabeza.
-        print("     *** triangulo rectangulo de cabeza.  ***\n")
+    elif opcion == 2:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triángulo rectangulo de cabeza.
+        print("     *** Triángulo rectángulo de cabeza.  ***\n")
         print()
         for i in range(1, numero_filas + 1):
             asteriscos = "*" * numero_filas
@@ -42,8 +42,8 @@ def piramides (opcion):
             numero_filas -= 1
             print()
         numero_filas = aux
-    elif opcion == 3:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triangulo de cabeza espejo.
-        print("     *** Triangulo rectangulo de cabeza espejo.  ***\n")
+    elif opcion == 3:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triángulo de cabeza espejo.
+        print("     *** Triángulo rectángulo de cabeza espejo.  ***\n")
         print()
         for i in range(1, numero_filas + 1):
             tabulador = " " * i
@@ -52,8 +52,8 @@ def piramides (opcion):
             numero_filas -= 1
             print()
         numero_filas = aux
-    elif opcion == 4:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triangulo isoseles.
-        print("     *** Triangulo rectangulo isoseles.  ***\n")
+    elif opcion == 4:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Triángulo isoseles.
+        print("     *** Triángulo  isoseles.  ***\n")
         for i in range(1, aux + 1):
             tabulador = " " * numero_filas
             asteriscos = "*" * i
