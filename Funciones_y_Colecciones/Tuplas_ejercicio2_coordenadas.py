@@ -1,6 +1,6 @@
 # Gracida Tapia Bryan.
 # 25 de noviembre del 2024.
-# Calculadora básica.
+# # Expresión de la recta mediante cordenadas especificas.
 
 
 
