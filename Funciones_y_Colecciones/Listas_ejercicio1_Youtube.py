@@ -26,7 +26,7 @@ def menu():
 # ///////////////////////////////////////////////////////////////////////////////////////// Funcion acción
 def accion (opcion):
     contador = 1
-    if opcion == 1:  # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar lista.
+    if opcion == 1:  # ................................ Mostrar lista.
         if not videos:
             print("No hay videos agregados.")
             return
@@ -36,7 +36,7 @@ def accion (opcion):
             contador += 1
 
 
-    elif opcion == 2:   # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar lista en orden alfabético.
+    elif opcion == 2:   # ................................ Mostrar lista en orden alfabético.
         if not videos:
             print("No hay videos agregados.")
             return
@@ -47,7 +47,7 @@ def accion (opcion):
             contador += 1
 
 
-    elif opcion == 3:       # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar lista en orden Z - A.
+    elif opcion == 3:       # ................................ Mostrar lista en orden Z - A.
         if not videos:
             print("No hay videos agregados.")
             return
@@ -57,11 +57,11 @@ def accion (opcion):
             print(f"{contador}) {video}")
             contador += 1
 
-    elif opcion == 4:       # \\\\\\\\\\\\\\\\\\\\\\\\\ Añadir un video.
+    elif opcion == 4:       # ................................ Añadir un video.
         nombre_video = input("Ingrese el nombre del video: ")
         videos.append(nombre_video)
 
-    elif opcion == 5:       # \\\\\\\\\\\\\\\\\\\\\\\\\ Añadir varios videos.
+    elif opcion == 5:       # ................................ Añadir varios videos.
         cantidad_videos = int(input("Ingrese el número de videos que desea ingresar: "))
         while contador <= cantidad_videos:
             nombre_video = input(f"Ingrese el nombre del video {contador}: ")
@@ -69,7 +69,7 @@ def accion (opcion):
             contador += 1
         contador = 1
 
-    elif opcion == 6:       # \\\\\\\\\\\\\\\\\\\\\\\\\ Eliminar un video.
+    elif opcion == 6:       # ................................ Eliminar un video.
         if not videos:
             print("\nNo hay videos agregados.")
             return
@@ -79,13 +79,13 @@ def accion (opcion):
         eliminar = int(input("Ingrese el número del video que desea eliminar: "))
         videos.pop(eliminar - 1)
 
-    elif opcion == 7:       # \\\\\\\\\\\\\\\\\\\\\\\\\ Salir del programa.
+    elif opcion == 7:       # ................................ Salir del programa.
         print("Saliendo del programa")
 
     print()
 
 
-# /////////////////////////////////////////////// Código a nivel de modulo
+# /////////////////////////////////////////////// Código a nivel de módulo
 opcion = 0
 i=0
 videos = []

@@ -22,7 +22,7 @@ def menu():
 # ///////////////////////////////////////////////////////////////////////////////////////// Función acción.
 def accion(opcion):
     contador = 0
-    if opcion == 1:                     # \\\\\\\\\\\\\\\\\\\\\\\\\ Ver todas las calificaciones de un alumno.
+    if opcion == 1:                     # ................................ Ver todas las calificaciones de un alumno.
         if not alumnos:
             print("No hay alumnos registrados.")
             return
@@ -42,7 +42,7 @@ def accion(opcion):
         print(f"Álgebra Lineal: {alumno['calificaciones']['Álgebra Lineal']}")
         print(f"Promedio: {sum(alumno['calificaciones'].values())/5}") # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para despues dividirlo entre 5.
         print()
-    elif opcion == 2:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Ver el promedio de cada alumno.
+    elif opcion == 2:                   # ................................ Ver el promedio de cada alumno.
         contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
@@ -53,7 +53,7 @@ def accion(opcion):
             print(f"Promedio: {promedio:.2f}")
             contador += 1
 
-    elif opcion == 3:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Agregar a un alumno.
+    elif opcion == 3:                   # ................................ Agregar a un alumno.
         nombre = input("Ingrese el nombre del nuevo alumno: ")
         materias = ["Estructura de datos", "Derecho y legislación", "Contabilidad General","Electrónica II", "Álgebra Lineal"]
         for materia in materias: # Se lee cada calificación en el orden de la lista  materias y se van guardando dentro de otra lista.
@@ -64,7 +64,7 @@ def accion(opcion):
         alumnos.append(nombre,)
         print(f"Alumno agregado correctamente.")
 
-    elif opcion == 4:                    # \\\\\\\\\\\\\\\\\\\\\\\\\ Eliminar alumno.
+    elif opcion == 4:                    # ................................ Eliminar alumno.
         contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
@@ -80,13 +80,13 @@ def accion(opcion):
 
 
 
-    elif opcion == 5:                   # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar promedio grupal.
+    elif opcion == 5:                   # ................................ Mostrar promedio grupal.
         total_calificaciones = 0
         contador = 0
         if not alumnos:
             print("No hay alumnos registrados.")
         for alumno in alumnos:
-            total_calificaciones += sum(alumno['calificaciones'].values())/5 # # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para luego dividirlo entre las materias existentes
+            total_calificaciones += sum(alumno['calificaciones'].values())/5 # Se utiliza la palabra reservada .values() para extraer todas las calificaciones, y se utiliza la palabra reservada sum(), para realizar la suma de las calificaciones que extrae .values(), para luego dividirlo entre las materias existentes
             contador +=1
         promedio_grupal = total_calificaciones / contador # El promedio grupal es el resultado de la suma del promedio final de cada alumno, entre los alumnos existentes.
         print(f"Promedio grupal: {promedio_grupal:.2f}")
@@ -100,7 +100,7 @@ def accion(opcion):
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
-# Programa principal
+
 alumnos = []
 calificaciones = {}
 opcion = 0

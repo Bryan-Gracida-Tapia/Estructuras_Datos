@@ -21,7 +21,7 @@ def menu():
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Función acción.
 def operacion (opcion):
-    if opcion == 1:                     # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  Mostrar cordenadas existentes.
+    if opcion == 1:                     # ................................  Mostrar cordenadas existentes.
         contador = 1
         if not cordenadas:
             print("No hay cordenadas registradas.")
@@ -32,7 +32,7 @@ def operacion (opcion):
             print(f"  Eje Y: {cordenada['cordenadas']['Eje Y']}")
 
             contador += 1
-    elif opcion == 2:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Agregar cordenadas.
+    elif opcion == 2:                   # ................................ Agregar cordenadas.
         x = float(input("Eje X: "))
         y = float(input("Eje Y: "))
 
@@ -41,8 +41,8 @@ def operacion (opcion):
 
         print("Coordenada agregada correctamente.")
 
-    elif opcion == 3:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Calcular la pendiente y la expresión de la recta.
-        # \\\\\\\\\\\\\\\\\\\ Selección de las cordenadas.
+    elif opcion == 3:                   # ................................ Calcular la pendiente y la expresión de la recta.
+        # |-------------------------------| Selección de las cordenadas.
         contador = 1
         if not cordenadas:
             print("No hay cordenadas registradas.")
@@ -57,14 +57,14 @@ def operacion (opcion):
         cordenada_1 = cordenadas[primera_cordenada - 1]['cordenadas']
         cordenada_2 = cordenadas[segunda_cordenada - 1]['cordenadas']
 
-        # \\\\\\\\\\\\\\\\\\\ Asignación de ejes correspondientes a las cordenadas.
+        # |-------------------------------| Asignación de ejes correspondientes a las cordenadas.
         x1, y1 = cordenada_1['Eje X'], cordenada_1['Eje Y']
         x2, y2 = cordenada_2['Eje X'], cordenada_2['Eje Y']
         pendiente = ((y2 - y1) / (x2 - x1))
         b = y1 - pendiente * x1
         print(f"Expresión de la recta vale: y = {pendiente:.2f} x + {b}")
 
-    elif opcion == 4:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Eliminar cordenada.
+    elif opcion == 4:                   # ................................ Eliminar cordenada.
         contador = 1
         if not cordenadas:
             print("No hay cordenadas registradas.")
@@ -77,7 +77,7 @@ def operacion (opcion):
         cordenada_elegida = int(input("Ingrese el número del alumno a eliminar: "))
         cordenadas.pop(cordenada_elegida - 1)
         print(f"Cordenada eliminada correctamente.")
-    elif opcion == 5:                   # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ Salir del programa.
+    elif opcion == 5:                   # ................................ Salir del programa.
         print("Saliendo del programa...")
 
     else:

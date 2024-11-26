@@ -1,14 +1,14 @@
 # Gracida Tapia Bryan.
-# 6 de noviembre del 2024.
+# 25 de noviembre del 2024.
 # Descripción:
-# Programa que imprime una piramide segun el numero que ingrese el usuario.
+# Programa que imprime una piramide según el número que ingrese el usuario.
 
 
 # for "variable" in secuencia
+numero_piramide = int(input("Ingrese un número: "))
+aux = numero_piramide
 #/////////////////////////////////////////////////////////////////////////////////////////
 # Primer ejercicio
-numero_piramide = int(input("ingrese un numero: "))
-aux = numero_piramide
 contador=0
 print("1)")
 print()

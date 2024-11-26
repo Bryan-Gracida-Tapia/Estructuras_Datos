@@ -19,5 +19,5 @@ print(f"\nLa suma de 1 hasta el {numero} es de: ", end= "")
 total = suma_acumulativa(numero)
 print(f"{total}")
 print("\nFin de la cuenta")
-#
+
 # randint (primer numero,segundo numero)

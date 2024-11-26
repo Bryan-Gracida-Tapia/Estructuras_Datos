@@ -19,7 +19,7 @@ def menu():
 # ///////////////////////////////////////////////////////////////////////////////////////// Función para encontrar los números máximo y mínimo
 def determinar ():
 
-    #\\\\\\\\\\\\\\\\\\\\\\\\\ Número Mínimo y Máximo
+    # ................................ Número Mínimo y Máximo
     numero_minimo = lista[0]
     numero_maximo = lista[0]
     if not lista:
@@ -31,13 +31,13 @@ def determinar ():
             numero_maximo = det
     return numero_maximo,numero_minimo
 
-# ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de modulo.
+# ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
 opcion = 0
 lista = []
 while opcion <= 6:
     opcion = menu()
 
-    if opcion == 1:     # \\\\\\\\\\\\\\\\\\\\\\\\\ Mostrar lista
+    if opcion == 1:     # ................................ Mostrar lista
         if not lista:
             print("No hay números en la lista.")
         print("Lista:")
@@ -45,16 +45,16 @@ while opcion <= 6:
             print(f"{i+1}) {numero}")
         print()
 
-    elif opcion == 2:   # \\\\\\\\\\\\\\\\\\\\\\\\\ Ingresar número
+    elif opcion == 2:   # ................................ Ingresar número
         numero = int(input("Ingresa un número: "))
         lista.append(numero)
         print(f"Número: {numero} añadido correctamente.")
 
-    elif opcion == 3:   # \\\\\\\\\\\\\\\\\\\\\\\\\ Número Mínimo y Máximo
-        maximo,minimo = determinar() # \\\\\\\\\\\\\\\\\\\\\\\\\ llamada a la función determinar
+    elif opcion == 3:   # ................................ Número Mínimo y Máximo
+        maximo,minimo = determinar() # |-------------------------------| llamada a la función determinar
         print(f"El número máximo de la lista es: {maximo} \nEl número mínimo de la lista es: {minimo}")
 
-    elif opcion == 6:   # \\\\\\\\\\\\\\\\\\\\\\\\\ Salir del programa
+    elif opcion == 6:   # ................................ Salir del programa
         print("Saliendo del programa...")
 
     else:
