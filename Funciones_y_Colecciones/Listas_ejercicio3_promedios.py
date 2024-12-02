@@ -61,7 +61,6 @@ def accion(opcion):
                 calificaciones[materia] = calificacion
 
         alumnos.append({"nombre": nombre, "calificaciones": calificaciones})
-        alumnos.append(nombre,)
         print(f"Alumno agregado correctamente.")
 
     elif opcion == 4:                    # ................................ Eliminar alumno.
