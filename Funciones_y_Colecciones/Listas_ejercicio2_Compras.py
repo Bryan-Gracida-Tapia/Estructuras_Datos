@@ -60,6 +60,6 @@ def acciones(opcion):
 opcion = 0
 nombre_producto=[]
 cantidad_producto = []
-while opcion != 7:
+while opcion != 5:
     opcion = menu()
     acciones(opcion)
