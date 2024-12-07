@@ -1,5 +1,5 @@
 # Gracida Tapia Bryan.
-# 25 de noviembre del 2024.
+# 06 de Diciembre del 2024.
 # Descripción:
 # Creación del juego PIEDRA,PAPEL,TIJERAS, utilizando diccionarios.
 import random

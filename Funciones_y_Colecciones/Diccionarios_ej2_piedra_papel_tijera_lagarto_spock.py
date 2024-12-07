@@ -1,3 +1,7 @@
+# Gracida Tapia Bryan.
+# 06 de Diciembre del 2024.
+# Descripción:
+# Creación del juego PIEDRA, PAPEL, TIJERAS, LAGARTO, SPOCK, de la serie de The Big Bang Theory, utilizando diccionarios.
 import random
 
 
@@ -20,30 +24,30 @@ def menu():
 
 def elecciones(opcion):
     if opcion == 1:                     # ................................ La opción elejida por el usuario vale PIEDRA.
-        eleccion_usuario = PIEDRA
+        usuario = PIEDRA
     elif opcion == 2:                     # ................................ La opción elejida por el usuario vale PAPEL.
-        eleccion_usuario = PAPEL
+        usuario = PAPEL
     elif opcion == 3:                     # ................................ La opción elejida por el usuario vale TIJERAS.
-        eleccion_usuario = TIJERAS
+        usuario = TIJERAS
     elif opcion == 4:                     # ................................ La opción elejida por el usuario vale LAGARTO.
-        eleccion_usuario = LAGARTO
+        usuario = LAGARTO
     elif opcion == 5:                     # ................................ La opción elejida por el usuario vale SPOCK.
-        eleccion_usuario = SPOCK
+        usuario = SPOCK
     elif opcion == 6:                     # ................................ Salir del programa.
         print("Saliendo...")
     else:
         print("Opción no valida, intentelo de nuevo.")
 
-    eleccion_cpu = random.choice([PIEDRA, PAPEL, TIJERAS, LAGARTO, SPOCK])      # Elección CPU toma un valor aleatorio de la lista.
+    cpu = random.choice([PIEDRA, PAPEL, TIJERAS, LAGARTO, SPOCK])      # Elección CPU toma un valor aleatorio de la lista.
 
-    print(f"Usuario: {eleccion_usuario}")
-    print(f"CPU: {eleccion_cpu}")
+    print(f"Usuario: {usuario}")
+    print(f"CPU: {cpu}")
 
-    return eleccion_usuario, eleccion_cpu
+    return usuario, cpu
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Función selecionar ganador.
 
-def seleccionar_ganador(eleccion_usuario, eleccion_cpu):
+def seleccionar_ganador(usuario, cpu):
     global puntos_jugador, puntos_cpu, puntos_empate            # Se usa la palabra reservada global  para acceder a las variables que se encuantran fuera de la función.
 
 
@@ -53,7 +57,7 @@ def seleccionar_ganador(eleccion_usuario, eleccion_cpu):
 
 
 
-    resultado = condiciones.get((eleccion_usuario, eleccion_cpu), EMPATE)           # Se declara el ganador tomando en cuenta las condicones anteriores.
+    resultado = condiciones.get((usuario, cpu), EMPATE)           # Se declara el ganador tomando en cuenta las condicones anteriores.
 
     if resultado == JUGADOR:            # ................................ Se actualizan los contadores según el resultado.
         puntos_jugador += 1         # Aumenta el contador de jugador
@@ -88,8 +92,8 @@ print("- Tijeras cortan papel.\n- Papel cubre piedra.\n- Piedra aplasta lagarto.
 while opcion != 6:
 
     opcion = menu()
-    eleccion_usuario, eleccion_cpu = elecciones(opcion)
-    seleccionar_ganador(eleccion_usuario, eleccion_cpu)
+    usuario, cpu = elecciones(opcion)
+    seleccionar_ganador(usuario, cpu)
 
     print()
     print("-----------------------------")
