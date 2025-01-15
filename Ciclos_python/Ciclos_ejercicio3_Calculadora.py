@@ -7,6 +7,10 @@
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Función menú.
 def menu():
+    """
+
+    :return: retorna un valor entero según haya elegido el usuario.
+    """
     print("     *** Menú ***")
     print("1) Suma.")
     print("2) Resta.")
@@ -16,15 +20,21 @@ def menu():
     print("6) Potenciación.")
     print("7) Salir.")
 
-    opcion = int(input("Elija una opción: "))
+    opcion = input("Elija una opción: ")
     print()
     return opcion
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Función calculadora.
-def calculadora (opcion):
-    primer_numero = float(input("Ingrese el primer número: "))
-    segundo_numero = float(input("Ingrese el segundo numero: "))
+def calculadora (opcion: int):
+    """
+
+    :param opcion:
+    :return: retorna un valor entero según la operacion que desea el usuario.
+    """
+    if opcion != 7:
+        primer_numero = float(input("Ingrese el primer número: "))
+        segundo_numero = float(input("Ingrese el segundo numero: "))
 
     if opcion == 1:     # ................................ Suma.
         print(
@@ -52,13 +62,14 @@ def calculadora (opcion):
 
 
 # ///////////////////////////////////////////////////////////////////////////////////////// Código a nivel de módulo.
-opcion = 0
-while opcion != 7:
-    opcion = menu()
-    calculadora(opcion)
+if __name__ == '__main__':
+    opcion = 0
+    while opcion != 7:
+        opcion = menu()
+        calculadora(opcion)
 
-    print()
-    print("-----------------------------")
-    print()
+        print()
+        print("-----------------------------")
+        print()
 
 
